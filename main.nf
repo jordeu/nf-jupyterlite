@@ -19,6 +19,6 @@ process jupyterlite {
     jupyter-lite build --contents=./demo.ipynb
 
     # Fix error with using query parameters at index.html
-    sed -i 's#index.html)#index.html|\\\\/index.html?.*)?$/, '/');#g' ./_output/config-utils.js
+    sed -i 's#index.html)#index.html|\\\\/index.html?.*)#g' ./_output/config-utils.js
     '''
 }

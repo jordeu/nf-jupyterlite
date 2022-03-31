@@ -1,3 +1,4 @@
+nextflow.enable.dsl = 1
 
 process jupyterlite {
   publishDir "${params.outdir}", mode: 'copy'
